@@ -3,12 +3,50 @@
 <head>
     <title>my third page</title>
 </head>
-
-
-
-
-
-
-
-<a href="index.html">homepage</a>
 <body>
+    
+    <a href="page2.html">page2</a>
+    <a href="index.html">home page</a>
+
+    <form action="index.html">
+
+        firstname: <input type="text" id="firstname">
+        <br>
+        email: <input type="text" id="email">
+        <br>
+        do you agree? <input type="text" id="yes">
+        <br>
+        <button type="button" id="submit button" onclick="checkit()">youre done!</button>
+
+    </form>
+
+    <script>
+        function checkit() {
+            if (document.getElementById("firstname").value == "") {
+
+                document.getElementById("firstname").style.backgroundColor = "red"
+                document.getElementById("required").innerHTML = "* required"
+
+            }
+
+
+        }
+
+
+    </script>
+
+<body>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
