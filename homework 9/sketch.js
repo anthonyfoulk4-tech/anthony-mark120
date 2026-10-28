@@ -8,6 +8,15 @@ var myy = 215;
 var mxxx = 150;
 var myyy = 193;
 var myyyy = 250;
+var myx2 = 193;
+var myy2 = 235;
+var myy3 = 193;
+var myx3 = 150;
+var movement = 1;
+var movement1 = 1;
+var textsize = 20;
+var count = 0;
+
 
 
 var mybodymoves = 1;
@@ -43,9 +52,20 @@ if(mxxx >= 400 || mxxx <= 0){
 }
 mxxx+= myeyemoves;
 
+if(myy2 >= 400 || myy2 <= 0){
 
+    myeyemoves *= -1;
 
+}
+myy2+= myeyemoves;
 
+if(myx3 >= 400 || myx3 <= 0){  
+
+    movement *= -1;
+
+}
+myx3+= movement; 
+myy3+= movement; 
 
 
 ellipse (x,y,350,180);
@@ -75,8 +95,9 @@ circle (235,193,40);
 circle (195,myyyy,40);
 myyyy = mouseX;
 fill (0);
-circle (150,193,20);
-circle (235,193,20);
+circle (myx3,myy3,20);
+
+circle (myx2,myy2,20);
 
 
 fill (0)
@@ -93,12 +114,19 @@ line(113,168,277,168);
 line(132,108,258,108);
 
 
+textSize(textsize);
+count ++;
+textsize += movement1;
 
-textSize(20);
+if( count >= 10){
+    movement1 *= -1;
+    count = 0;
+}
+
+
 fill (255);
 text("Anthony Foulk", 120,61);
 text ("portrait attempt", 120,81);
-
 
 
 
